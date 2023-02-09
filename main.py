@@ -8,8 +8,16 @@ def hello_world():
     return "<p>Hello, World!</p>"
 
 @app.route("/sum/<int:a>/<int:b>")
+# def sum(a,b):
+#     return str(a+b)
 def sum(a,b):
-    return str(a+b)
+    result={
+        "a value":a,
+        "b value":b,
+        "testList":[1,2,3],
+        "sum is ":a+b
+    }
+    return jsonify(result) #that is content will be return in json type
 
 if __name__ == "__main__":
     app.run(debug=True)
