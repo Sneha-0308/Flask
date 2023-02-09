@@ -1,3 +1,6 @@
+# https://www.geeksforgeeks.org/python-build-a-rest-api-using-flask/
+
+
 from flask import Flask, jsonify, request
 from flask_restful import Resource, Api
 
@@ -18,9 +21,8 @@ class Hello(Resource):
         return jsonify({"message":"Hello world"})
 
     def post(self):
-        data = request.get_json()
-        # print(data)
-        return jsonify({"data":data})
+        data = request.get_json() # this get the json data which will be provided by user as input
+        return jsonify(data)
 
 # restful api of sqaure class
 class Square(Resource):
