@@ -1,24 +1,4 @@
-# import tensorflow as tf
-# from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
-# # Load image and resize to 224x224
-# image = load_img('my_image.jpg', target_size=(224, 224))
-
-# # Convert image to numpy array and normalize pixel values
-# image_array = img_to_array(image)
-# image_array = image_array / 255.0  # normalize to [0, 1]
-
-# # Add an extra dimension to represent the batch size
-# image_array = tf.expand_dims(image_array, 0)
-
-# # Load the pre-trained model
-# model = tf.keras.applications.MobileNetV2()
-
-# # Pass the image through the model to get predictions
-# predictions = model.predict(image_array)
-
-# # Print the top prediction
-# print(tf.keras.applications.mobilenet_v2.decode_predictions(predictions, top=1))
 
 
 import json
